@@ -1,0 +1,104 @@
+#resource-list, .state-box ul, #modal-process-needs {
+    list-style-type: none;
+    margin-left: 0px;
+}
+
+#resource-list li {
+    border-bottom: 1px solid #999;
+}
+
+#resource-list li:last-child {
+    border-bottom: none;
+}
+
+#resource-list label {
+    width: 70px;
+}
+
+#resource-list .controls {
+    margin-left: 90px;
+}
+
+#resource-list h4 {
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+#add_sched {
+    margin-top: 5px;
+}
+
+#processes td {
+    text-align: center;
+}
+
+
+
+.state-box {
+    float: left;
+    width: 150px;
+    border: 2px solid black;
+    margin: 5px;
+    text-align: center;
+    border-radius: 3px;
+	
+}
+
+.state-box.process {
+    min-height: 30px;
+    font-weight: bold;
+}
+
+.state-box.process h4 {
+    line-height: 30px;
+}
+
+.state-box.process.terminated {
+    text-decoration: line-through;
+    font-weight: normal;
+}
+
+.state-box.resource {
+
+}
+
+.progress .text {
+    position: absolute;
+    height: 18px;
+    width: 100%;
+    top: 0px;
+    text-align: center;
+    color: white;
+}
+
+.progress .text span {
+    background-color: rgba(180, 180, 180, 0.5);
+    border-radius: 3px;
+}
+
+/* So that the Resources line doesn't end up floating */
+#simulation-state h3 {
+    clear: both;
+}
+
+#simulation-resource-boxes li.active {
+    font-style: italic;
+    font-size: 12pt;
+}
+
+#simulation-resource-boxes li.blocked {
+    font-style: line-through;
+}
+
+.state-box ul {
+    margin-bottom: 0px;
+}
+
+.state-box h4 {
+    border-bottom: 2px solid black;
+}
+
+#last-event-string {
+    text-align: center;
+    font-style: italic;
+}
