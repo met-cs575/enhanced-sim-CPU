@@ -32,3 +32,9 @@ This command will start monitoring `SASS` folder and compile css files then plac
 #### Windows users:
 For Windows users, you can either install [Ruby for Windows](http://rubyinstaller.org) then install compass gem as Mac user.
 Or install a paid ($10) app: [Compass App](http://compass.kkbox.com)
+
+##Backbone.js
+We us backbone.js as the JS MV* framework to make the life of developers easier.
+
+
+#How to use
