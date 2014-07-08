@@ -25,7 +25,16 @@
 <div class="container">
     <h1>CPU Scheduling Simulator 2.0</h1>
     <hr>
-    <a href="#/generate_processes" class="btn btn-primary generate-processes">Generate Processes</a>
+    <form class="form-inline set-how-many-processes" role="form">
+        
+        <div class="input-group">
+            <input class="how-many-processes form-control" type="number" value="0">
+            <span class="input-group-btn">
+                <a href="#/generate_processes" class="btn btn-primary generate-processes">Generate Processes</a>
+            </span>          
+        </div>
+        
+    </form>
 
     <table id="processes" class="table table-striped">
         <thead>
@@ -42,19 +51,49 @@
         </tbody>
     </table>
 
-
+    
 </div> <!-- /.container -->
 
+<footer class="footer">
+    <p class="text-muted">Place sticky footer content here.</p>
+</footer>
+<div id="outdated">
+     <h6>Your browser is out-of-date!</h6>
+     <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+     <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+
 <script type="text/template" id="process-list-template">
+{{ _.each(processes.models, function(process) { }}
 <tr class="data-row">
-    <td class="serial">{{=process.serial}}</td>
-    <td class="name">{{=process.name}}</td>
-    <td class="arrive-at">{{=process.arrive_at}}</td>
-    <td class="busrt-time">{{=process.burst_time}}</td>
-    <td class="deadline">{{=process.deadline}}</td>
+    <td class="serial">{{=process.attributes.serial}}</td>
+    <td class="name">{{=process.attributes.name}}</td>
+    <td class="arrive-at">{{=process.attributes.arrive_at}}</td>
+    <td class="busrt-time">{{=process.attributes.burst_time}}</td>
+    <td class="deadline">{{=process.attributes.deadline}}</td>
 </tr>
+{{ }) }}
 </script>
 <script src="javascripts/init.js"></script>
+<script src="javascripts/App.Model.Process.js"></script>
+<script src="javascripts/App.View.Viewport.js"></script>
+<script src="javascripts/App.View.ProcessList.js"></script>
+<script src="javascripts/App.Router.js"></script>
 <script src="javascripts/main.js"></script>
+
+<!-- outdatedBrowser -->
+<script src="outdatedbrowser/outdatedBrowser.min.js"></script>
+<link rel="stylesheet" href="outdatedbrowser/outdatedBrowser.min.css">
+<script type="text/javascript">
+$( document ).ready(function() {
+    outdatedBrowser({
+        bgColor: '#f25648',
+        color: '#ffffff',
+        lowerThan: 'transform'
+    })
+})
+</script> 
+<!-- outdatedBrowser -->
+
 </body>
 </html>

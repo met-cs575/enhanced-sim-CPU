@@ -9,3 +9,15 @@ body {
   font-size: 14px;
   color: #666666;
 }
+
+/* line 15, ../sass/screen.scss */
+footer.footer {
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1em;
+  font-size: 1em;
+  bottom: 0;
+  background: #ccc;
+  display: block;
+}
