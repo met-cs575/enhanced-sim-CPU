@@ -3,12 +3,11 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "compass/reset";
 @import "_variables";
 
 body {
   background-color: $mainBackground;
   font-family:Calibri;
   font-size:14px;
-  color: $danger;
+  color: $mainColor;
 }

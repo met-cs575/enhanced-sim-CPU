@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Scheduling Simulator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="bootstrap-3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <!--[if IE]>
+        <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    
+    <script src="javascripts/jquery-1.11.1.min.js"></script>
+    <script src="bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script src="javascripts/underscore-min.js"></script>
+    <script src="javascripts/backbone-min.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <h1>CPU Scheduling Simulator 2.0</h1>
+    <hr>
+    <a href="#/generate_processes" class="btn btn-primary generate-processes">Generate Processes</a>
+
+    <table id="processes" class="table table-striped">
+        <thead>
+        <tr>
+            <th class="serial">#</th>
+            <th class="name">Name</th>
+            <th class="arrive-at">Arrives at</th>
+            <th class="busrt-time">CPU Burst time</th>
+            <th class="deadline">Deadline</th>
+        </tr>
+        </thead>
+        <tbody class="page">
+        
+        </tbody>
+    </table>
+
+
+</div> <!-- /.container -->
+
+<script type="text/template" id="process-list-template">
+<tr class="data-row">
+    <td class="serial">{{=process.serial}}</td>
+    <td class="name">{{=process.name}}</td>
+    <td class="arrive-at">{{=process.arrive_at}}</td>
+    <td class="busrt-time">{{=process.burst_time}}</td>
+    <td class="deadline">{{=process.deadline}}</td>
+</tr>
+</script>
+<script src="javascripts/init.js"></script>
+<script src="javascripts/main.js"></script>
+</body>
+</html>

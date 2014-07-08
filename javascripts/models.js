@@ -6,7 +6,7 @@ var CPU = Backbone.Model.extend({
 
 });
 
-var Algorith = Backbone.Model.extend({
+var Algorithm = Backbone.Model.extend({
   initialize: function() {
     this.name = "";
   },
