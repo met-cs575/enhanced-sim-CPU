@@ -7,12 +7,7 @@ App.Router = Backbone.Router.extend({
 });
 
 var router = new App.Router();
-router.on('route:home', function(){
-  //viewport.render();
-  // processList.render();
-});
-router.on('route:generateProcesses', function(){
-  // processList.render();
-});
+router.on('route:home', App.Controller.HomeController.index);
+router.on('route:generateProcesses', App.Controller.ProcessesController.generate);
 
 Backbone.history.start();

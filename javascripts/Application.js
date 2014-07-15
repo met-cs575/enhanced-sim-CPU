@@ -10,5 +10,7 @@ window.App = {
   Model: function(){},
   View: function(){},
   Router: function(){},
+  Collection: function(){},
+  Controller: function(){},
   Global: {}
 }
