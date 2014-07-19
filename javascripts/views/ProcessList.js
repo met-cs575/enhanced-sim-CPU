@@ -6,6 +6,8 @@ App.View.ProcessList = Backbone.View.extend({
   },
   render: function(){
     var self = this;
+    this.collection.comparator = 'arrive_at';
+    this.collection.sort();
     var template = _.template($('#process-list-template').html(), {processes: this.collection});
     self.$el.html(template);
   },
@@ -14,4 +16,3 @@ App.View.ProcessList = Backbone.View.extend({
   }
 });
 var processList = new App.View.ProcessList();
-processList.render();

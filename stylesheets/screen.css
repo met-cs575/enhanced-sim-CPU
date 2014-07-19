@@ -21,3 +21,51 @@ footer.footer {
   background: #ccc;
   display: block;
 }
+
+/* line 41, ../sass/screen.scss */
+.wrapper {
+  overflow: scroll;
+  width: 100%;
+  height: 50px;
+  padding: 0;
+  position: relative;
+}
+/* line 47, ../sass/screen.scss */
+.wrapper .niddle {
+  position: absolute;
+  display: block;
+  height: 50px;
+  width: 5px;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: #ccc;
+  font-size: 1px;
+  letter-spacing: -1px;
+  color: transparent;
+}
+
+/* line 61, ../sass/screen.scss */
+.simulator {
+  width: 65536px;
+  height: 50px;
+}
+/* line 64, ../sass/screen.scss */
+.simulator div.task {
+  display: block;
+  float: left;
+  width: 50px;
+  height: 50px;
+  line-height: 38px;
+  min-height: 50px;
+  max-height: 50px;
+  border: 1px solid #cccccc;
+  border-radius: 12.5px;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 5px;
+  margin: 0;
+}
+/* line 80, ../sass/screen.scss */
+.simulator div.task-process {
+  background: #049cdb;
+}

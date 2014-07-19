@@ -38,13 +38,6 @@
         
     </form>
 
-    <div class="wrapper">
-        <span class="niddle">|</span>
-        <div class="simulator">
-            
-        </div>
-    </div>
-
     <table id="processes" class="table table-striped">
         <thead>
         <tr>
@@ -88,23 +81,6 @@
 </tr>
 {{ }) }}
 </script>
-<script type="text/template" id="task-template">
-
-<div class="task task-{{=task.get('type')}}"
-    data-task-id="{{=task.id}}"
-    data-task-start="{{=task.get('time')}}"
-    data-task-duration="{{=task.get('duration')}}"
-    data-task-type="{{=task.get('type')}}"
-    style="width: {{=task.get('duration') * 20}}px;" >
-    {{ if(task.get('type') === 'process') { }}
-        <span class="process-serial">{{=task.get('type')}}: {{=task.get('process').get('serial')}}</span>
-    {{ } else { }}
-        <span class="process-serial">{{=task.get('type')}}</span>
-    {{ } }}
-</div>
-
-</script>
-
 <script src="javascripts/Application.js"></script>
 <script src="javascripts/models/Process.js"></script>
 <script src="javascripts/models/CPU.js"></script>
@@ -115,19 +91,13 @@
 
 <script src="javascripts/views/Viewport.js"></script>
 <script src="javascripts/views/ProcessList.js"></script>
-<script src="javascripts/views/Simulator.js"></script>
 
 <script src="javascripts/controllers/FifoCPUController.js"></script>
 <script src="javascripts/controllers/HomeController.js"></script>
-
+<script src="javascripts/controllers/ProcessesController.js"></script>
 
 <script src="javascripts/Router.js"></script>
 
-<script src="javascripts/bootstrap.js"></script>
-
-<script>
-    
-</script>
 
 <!-- outdatedBrowser -->
 <script src="lib/outdatedbrowser/outdatedBrowser.min.js"></script>

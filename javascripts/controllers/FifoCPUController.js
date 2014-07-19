@@ -13,17 +13,41 @@ App.Controller.FifoCPUController = {
     var tasks = new App.Collection.Tasks();
     // Build the tasks
     var time = 0;
-    for(var i = 0; i < theseProcesses.length; i++) {
-      if(time < theseProcesses.at(i).get('arrive_at')) {
-        time = theseProcesses.at(i).get('arrive_at');
-      }
+    var count = 0
+    for(var i = 0; i < theseProcesses.length; ) {
       var task = new App.Model.Task();
       var p = theseProcesses.at(i);
+      var arrive_at = p.get('arrive_at');
+
+      var duration = 0;
+      var type = '';
+      var start_at = 0;
+//debugger;
+      if(arrive_at > time) { // means idle
+        duration = p.get('arrive_at') - time;
+        type = 'idle';
+        p = null;
+      //} else if(time > p.get('arrive_at')) { // means queue
+
+      } else { // means busy
+        //arrive_at = time;
+        duration = p.get('burst_time');
+        type = 'process';
+        i++;
+      }
+
+      console.log("i:" + i + ", arr: " + arrive_at + ", time: " + time + ", duration: " + duration);
+      time += duration;
+      
+      
+      task.id = count;
+      task.set('type', type);
       task.set('process', p);
-      task.set('duration', p.get('burst_time'));
+      task.set('duration', duration);
       task.set('time', time);
-      time += p.get('burst_time');
       tasks.add(task);
+      
+      count++;
     }
     return tasks;
   }

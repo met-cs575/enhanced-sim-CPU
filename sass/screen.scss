@@ -22,3 +22,62 @@ footer.footer {
   background: #ccc;
   display: block;
 }
+
+
+$blue: #049cdb !default;
+$blueDark: #0064cd !default;
+$green: #46a546 !default;
+$red: #9d261d !default;
+
+
+$taskBlockWidth: 50px;
+$taskBlockHeight:50px;
+$taskBorderColor: #ccc;
+$taskBorderWidth: 1px;
+$taskPadding: 5px;
+$taskTypeProcess: $blue;
+$taskTypeContextSwitch: $blueDark;
+$taskTypeAlgorithm: $red;
+.wrapper {
+  overflow: scroll;
+  width: 100%;
+  height: $taskBlockHeight;
+  padding:0;
+  position: relative;
+  .niddle {
+    position: absolute;
+    display: block;
+    height: $taskBlockHeight;
+    width: 5px;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: #ccc;
+    font-size: 1px;
+    letter-spacing: -1px;
+    color: transparent;
+
+  }
+}
+.simulator {
+  width: 65536px;
+  height: $taskBlockHeight;
+  div.task {
+    display: block;
+    float: left;
+    width: $taskBlockWidth;
+    height: $taskBlockHeight;
+    line-height: $taskBlockHeight - ($taskPadding * 2) - ($taskBorderWidth * 2);
+    min-height: $taskBlockHeight;
+    max-height: $taskBlockHeight;
+    border: 1px solid $taskBorderColor;
+    border-radius: $taskBlockHeight / 4;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: $taskPadding;
+    margin:0;
+  }
+
+  div.task-process {
+    background: $taskTypeProcess;
+  }
+}
