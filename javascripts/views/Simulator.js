@@ -5,7 +5,7 @@ App.View.Simulator = Backbone.View.extend({
     // this.listenTo(this.collection, 'add', this.addProcess);
   },
   render: function(){
-    var tasks = App.Controller.FifoCPUController.run(App.Global.processes);
+    var tasks = App.Module.AlgorithmFIFO(App.Global.processes);
     var self = this;
     // console.log(App.Global.tasks);
     //var tasks = App.Global.tasks;

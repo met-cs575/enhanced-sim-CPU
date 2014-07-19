@@ -12,5 +12,6 @@ window.App = {
   Router: function(){},
   Collection: function(){},
   Controller: function(){},
+  Module: function(){},
   Global: {}
 }
