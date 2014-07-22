@@ -2,7 +2,7 @@ App.View.ProcessList = Backbone.View.extend({
   el: '.page',
   collection: App.Global.processes,
   initialize: function() {
-    this.listenTo(this.collection, 'add', this.addProcess);
+    this.listenTo(this.collection, 'change', this.render());
   },
   render: function(){
     var self = this;
@@ -15,4 +15,3 @@ App.View.ProcessList = Backbone.View.extend({
     this.render();
   }
 });
-var processList = new App.View.ProcessList();
