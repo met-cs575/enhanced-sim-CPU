@@ -1,4 +1,4 @@
-describe('Viewport', function(){
+describe('AlgorithmRR', function(){
     //loadFixtures('../../index.html');
     
     var scope = "";

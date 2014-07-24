@@ -1,9 +1,9 @@
 App.View.Viewport = Backbone.View.extend({
   initialize: function() {
-     console.log("viewport initialized");
+     //console.log("viewport initialized");
     $(".how-many-processes").val(5);
-    $(".how-many-processes").val();
-    //App.Global.howManyProcesses = parseInt($(".how-many-processes").text(), 10);
+    //$(".how-many-processes").val();
+    App.Global.howManyProcesses = parseInt($(".how-many-processes").val(), 10);
   },
   el: 'div.container',
   render: function(){

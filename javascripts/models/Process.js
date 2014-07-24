@@ -2,6 +2,7 @@
 App.Model.Process = Backbone.Model.extend({
   // urlRoot for AJAX requests.
   urlRoot: "/process", 
+  arrive_at: 0.0,
   initialize: function() {
     arrive_at = 0;
     burst_time = 0;
