@@ -58,6 +58,17 @@ $taskTypeAlgorithm: $red;
 
   }
 }
+.simulator-viewport {
+  border: 1px #ccc solid;
+  margin-top: 20px;
+  box-sizing: border-box;
+  .current-task img.cpu-image {
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+  }
+
+}
 .simulator {
   width: 65536px;
   height: $taskBlockHeight;

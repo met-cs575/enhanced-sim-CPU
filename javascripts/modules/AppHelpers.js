@@ -6,9 +6,9 @@ App.Module.generateProcesses = function(limit) {
     processData = {
       serial: i,
       name: "Awesome process",
-      arrive_at: Math.floor((Math.random() * 20) + 1),
-      burst_time: Math.floor((Math.random() * 30) + 1),
-      deadline: Math.floor((Math.random() * 40) + 1)
+      arrive_at: Math.floor((Math.random() * 10) + 1),
+      burst_time: Math.floor((Math.random() * 10) + 1),
+      deadline: Math.floor((Math.random() * 20) + 1)
     }
     process = new App.Model.Process(processData);
     models.push(process);

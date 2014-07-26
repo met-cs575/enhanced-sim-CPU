@@ -10,87 +10,72 @@ App.Module.AlgorithmRR = function(processes, atTime) {
   theseProcesses.comparator = 'arrive_at';
   theseProcesses.sort();
 
-  var busy = false;
-  // var timeline = new App.Collection.Timeline();
-  var tasks = new App.Collection.Tasks();
-  // Build the tasks
-  
+  var tasks = new App.Collection.Tasks();  
   var count = 0
 
   var queue = new Array();
   var time = 0.0;
-  var output = "";
+  var idleStart = 0;
+  var idleEnd = 0;
+  var idling = false;
+
+  // Build the tasks
   while(theseProcesses.length > 0) {
     arrivals = theseProcesses.atTime(time);
+    // If processes arrive at time x
     if (arrivals.length > 0) {
-      var howMany = arrivals.length;
+      // Add processes to ready queue.
       queue = queue.concat(arrivals);
+      // Remove these processes from process list.
       theseProcesses.remove(arrivals);
-      output += "At time: " + time;
-      output += ", " + howMany + " processes have arrived.\n";
-
     }
-    // If ready queue is not empty and CPU is not busy
-    if(queue.length > 0 && !busy) {
-      idleEnd = time;
-      idleStart = -1;
-      taskStart = time;
-      taskEnd = taskStart + quantum;
-      busy = true;
-      output += "Idle ends at " + idleEnd + "\n";
+
+    // Add "idle" task.
+    if(queue.length == 0) {
+      if(!idling) {
+        idleStart = time;
+        idling = true;
+      }
     } else {
+      if(idling) {
+        idleEnd = time;
+        idling = false;
+        var task = new App.Model.Task();
+        task.set('type', 'idle');
+        task.set('time', time);
+        task.set('duration', idleEnd - idleStart);
+        tasks.add(task);
+      }
+    }
       
-      idleStart = time;
-      busy = false;
-      output += "Idle starts at " + idleStart + "\n";
+
+    // This while loop processes ready queue.
+    while(queue.length > 0) {
+      var runningTask = queue.shift();
+      var task = new App.Model.Task();
+      var burstTime = runningTask.get('burst_time');
+      var remainingBurst = burstTime - quantum;
+      
+      if(remainingBurst < 0) {
+        task.set('duration', burstTime);
+      } else {
+        task.set('duration', quantum)
+        
+        if(remainingBurst > 0) {
+          queue.push(runningTask);
+        }
+      }
+
+      runningTask.set('burst_time', remainingBurst);
+      task.set('type', 'process');
+      task.set('process', runningTask);
+      task.set('time', time);
+      tasks.add(task);
+      time += quantum;
     }
     time += 0.1;
 
-    //console.log(queue);
-    //break;
-    //if
-  }
-  console.log(output);
-  console.log( queue);
-
-
-  for(var i = 0; i < theseProcesses.length; ) {
-    var task = new App.Model.Task();
-    var p = theseProcesses.at(i);
-    var arrive_at = p.get('arrive_at');
-
-    var duration = 0;
-    var type = '';
-    var start_at = 0;
-
-    if(arrive_at > time) { // means idle
-      duration = p.get('arrive_at') - time;
-      type = 'idle';
-      p = null;
-    } else { // means busy
-      //arrive_at = time;
-      duration = p.get('burst_time');
-      if(duration > quantum) { //RR
-        duration = quantum; 
-        // var newProcess = p.clone();
-        // newProcess.set('burst_time', burst_time - quantum);
-      }
-      type = 'process';
-      i++;
-    }
-
-    //console.log("i:" + i + ", arr: " + arrive_at + ", time: " + time + ", duration: " + duration);
-    time += duration;
-    
-    
-    task.id = count;
-    task.set('type', type);
-    task.set('process', p);
-    task.set('duration', duration);
-    task.set('time', time);
-    tasks.add(task);
-    
-    count++;
   }
   return tasks;
+
 }

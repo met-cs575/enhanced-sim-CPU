@@ -2,9 +2,10 @@ App.Controller.HomeController = {
 
   index: function(){
     //console.log('home');
-    App.Module.generateProcesses(10);
+    App.Module.generateProcesses(3);
     processList.render();
-    simulator.render();
+    simulatorFIFO.render();
+    simulatorRR.render();
     //$('div.result').append(output);
     // processList.render();
   }

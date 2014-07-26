@@ -37,11 +37,39 @@
         </div>
         
     </form>
-
-    <div class="wrapper">
-        <span class="niddle">|</span>
-        <div class="simulator">
+    
+    <div class="simulator-viewport col-lg-5" id="fifo-simulator">
+        <div class="ready-queue">
             
+        </div>
+
+
+        <div class="current-task">
+            <img class="cpu-image" src="images/cpu.png" >
+        </div>
+        <div class="wrapper">
+            <span class="niddle">|</span>
+            <div class="simulator">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-2"></div>
+    <div class="simulator-viewport col-lg-5" id="rr-simulator">
+        <div class="ready-queue">
+            
+        </div>
+
+
+        <div class="current-task">
+            <img class="cpu-image" src="images/cpu.png" >
+        </div>
+        <div class="wrapper">
+            <span class="niddle">|</span>
+            <div class="simulator">
+                
+            </div>
         </div>
     </div>
 
@@ -90,6 +118,10 @@
 </script>
 <script type="text/template" id="task-template">
 
+
+
+
+{{ _.each(tasks.models, function(task) { }}
 <div class="task task-{{=task.get('type')}}"
     data-task-id="{{=task.id}}"
     data-task-start="{{=task.get('time')}}"
@@ -102,6 +134,7 @@
         <span class="process-serial">{{=task.get('type')}}</span>
     {{ } }}
 </div>
+{{ }) }}
 
 </script>
 
