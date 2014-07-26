@@ -50,3 +50,13 @@ App.View.SimulatorRR = App.View.Simulator.extend({
   }
 });
 var simulatorRR = new App.View.SimulatorRR();
+
+
+
+App.View.SimulatorSJF = App.View.Simulator.extend({
+  el: '#sjf-simulator',
+  runAlgorithm: function() {
+    return App.Module.AlgorithmSJF(App.Global.processes);
+  }
+});
+var simulatorSJF = new App.View.SimulatorSJF();
