@@ -22,7 +22,7 @@ footer.footer {
   display: block;
 }
 
-/* line 41, ../sass/screen.scss */
+/* line 49, ../sass/screen.scss */
 .wrapper {
   overflow: scroll;
   width: 100%;
@@ -30,7 +30,7 @@ footer.footer {
   padding: 0;
   position: relative;
 }
-/* line 47, ../sass/screen.scss */
+/* line 55, ../sass/screen.scss */
 .wrapper .niddle {
   position: absolute;
   display: block;
@@ -44,25 +44,25 @@ footer.footer {
   color: transparent;
 }
 
-/* line 61, ../sass/screen.scss */
+/* line 69, ../sass/screen.scss */
 .simulator-viewport {
   border: 1px #ccc solid;
   margin-top: 20px;
   box-sizing: border-box;
 }
-/* line 65, ../sass/screen.scss */
+/* line 73, ../sass/screen.scss */
 .simulator-viewport .current-task img.cpu-image {
   display: block;
   margin: 0 auto;
   width: 40%;
 }
 
-/* line 72, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 .simulator {
   width: 65536px;
   height: 50px;
 }
-/* line 75, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 .simulator div.task {
   display: block;
   float: left;
@@ -78,7 +78,35 @@ footer.footer {
   padding: 5px;
   margin: 0;
 }
-/* line 91, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
 .simulator div.task-process {
   background: #049cdb;
+}
+/* line 103, ../sass/screen.scss */
+.simulator div.taks-serial-0 {
+  background: #ffffd9;
+}
+/* line 107, ../sass/screen.scss */
+.simulator div.taks-serial-1 {
+  background: #049cdb;
+}
+/* line 111, ../sass/screen.scss */
+.simulator div.taks-serial-2 {
+  background: #04bcdb;
+}
+/* line 115, ../sass/screen.scss */
+.simulator div.taks-serial-3 {
+  background: #249cdb;
+}
+/* line 119, ../sass/screen.scss */
+.simulator div.taks-serial-4 {
+  background: #049cdb;
+}
+/* line 123, ../sass/screen.scss */
+.simulator div.taks-serial-5 {
+  background: #049cfb;
+}
+/* line 127, ../sass/screen.scss */
+.simulator div.taks-serial-6 {
+  background: #04dcdb;
 }

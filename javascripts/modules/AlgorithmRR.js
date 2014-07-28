@@ -18,7 +18,7 @@ App.Module.AlgorithmRR = function(processes, atTime) {
   var idleStart = 0;
   var idleEnd = 0;
   var idling = false;
-
+  var arrivals = null;
   // Build the tasks
   while(theseProcesses.length > 0) {
     arrivals = theseProcesses.atTime(time);
@@ -70,13 +70,13 @@ App.Module.AlgorithmRR = function(processes, atTime) {
       task.set('type', 'process');
       task.set('process', runningTask);
       task.set('time', time);
+      task.set('process_serial', runningTask.get('serial'));
       tasks.add(task);
       time += quantum;
     }
     time += 0.1;
 
   }
-  console.log(tasks);
   return tasks;
 
 }

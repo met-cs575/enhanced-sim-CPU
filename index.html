@@ -136,7 +136,7 @@
 </script>
 <script type="text/template" id="task-template">
 {{ _.each(tasks.models, function(task) { }}
-<div class="task task-{{=task.get('type')}}"
+<div class="task task-{{=task.get('type')}} taks-serial-{{=task.get('process_serial') }}"
     data-task-id="{{=task.id}}"
     data-task-start="{{=task.get('time')}}"
     data-task-duration="{{=task.get('duration')}}"

@@ -5,7 +5,7 @@ App.Controller.HomeController = {
     App.Module.generateProcesses(3);
     processList.render();
     simulatorFIFO.render();
-    //simulatorRR.render();
+    simulatorRR.render();
     simulatorSJF.render();
     //$('div.result').append(output);
     // processList.render();

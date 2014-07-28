@@ -46,6 +46,8 @@ var simulatorFIFO = new App.View.SimulatorFIFO();
 App.View.SimulatorRR = App.View.Simulator.extend({
   el: '#rr-simulator',
   runAlgorithm: function() {
+    //debugger;
+    console.log('runAlgorithm');
     return App.Module.AlgorithmRR(App.Global.processes);
   }
 });
