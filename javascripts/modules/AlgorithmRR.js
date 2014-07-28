@@ -76,6 +76,7 @@ App.Module.AlgorithmRR = function(processes, atTime) {
     time += 0.1;
 
   }
+  console.log(tasks);
   return tasks;
 
 }

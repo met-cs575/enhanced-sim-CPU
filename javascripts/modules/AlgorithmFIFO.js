@@ -35,7 +35,7 @@ App.Module.AlgorithmFIFO = function(processes, atTime) {
       i++;
     }
 
-    console.log("i:" + i + ", arr: " + arrive_at + ", time: " + time + ", duration: " + duration);
+    //console.log("i:" + i + ", arr: " + arrive_at + ", time: " + time + ", duration: " + duration);
     time += duration;
     
     
