@@ -25,89 +25,92 @@
     <div class="result">
         
     </div>
-    <h1>CPU Scheduling Simulator 2.1</h1>
+    <h1>CPU Scheduling Simulator 2.0</h1>
     <hr>
-    <form class="form-inline set-how-many-processes" role="form">
-        
-        <div class="input-group">
-            <input class="how-many-processes form-control" type="number" value="0">
-            <span class="input-group-btn">
-                <a href="#/generate_processes" class="btn btn-primary generate-processes">Generate Processes</a>
-            </span>          
-        </div>
-        
-    </form>
     
-    <div class="simulator-viewport col-lg-5" id="fifo-simulator">
-        <div class="ready-queue">
-            
-        </div>
-
-
-        <div class="current-task">
-            <span class="text-detail">FIFO</span>
-            <img class="cpu-image" src="images/cpu.png" >
-        </div>
-        <div class="wrapper">
-            <span class="niddle">|</span>
-            <div class="simulator">
                 
-            </div>
-        </div>
+    <div class="input-group col-lg-3">
+        <input class="how-many-processes form-control" type="number" value="10">
+        <span class="input-group-addon">
+            Processes
+        </span>
+        <span class="input-group-btn">
+            <a class="btn btn-danger start-simulation ">Start</a>
+        </span>
     </div>
 
-    <div class="col-lg-2"></div>
-    <div class="simulator-viewport col-lg-5" id="rr-simulator">
-        <div class="ready-queue">
-            
-        </div>
+    
+    
+    <div class="row">
+        <div class="simulators col-lg-7">
+            <div class="simulator-viewport " id="fifo-simulator">
+                <div class="ready-queue">
+                    
+                </div>
 
 
-        <div class="current-task">
-            <span class="text-detail">Round-Robin</span>
-            <img class="cpu-image" src="images/cpu.png" >
-        </div>
-        <div class="wrapper">
-            <span class="niddle">|</span>
-            <div class="simulator">
-                
+                <div class="current-task">
+                    <span class="text-detail">FIFO</span>
+                    <img class="cpu-image" src="images/cpu.png" >
+                </div>
+                <div class="wrapper">
+                    <span class="niddle">|</span>
+                    <div class="simulator">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="simulator-viewport " id="rr-simulator">
+                <div class="ready-queue">
+                    
+                </div>
+
+
+                <div class="current-task">
+                    <span class="text-detail">Round-Robin</span>
+                    <img class="cpu-image" src="images/cpu.png" >
+                </div>
+                <div class="wrapper">
+                    <span class="niddle">|</span>
+                    <div class="simulator">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="simulator-viewport " id="sjf-simulator">
+                <div class="ready-queue"> 
+                </div>
+
+                <div class="current-task">
+                    <span class="text-detail">SJF</span>
+                    <img class="cpu-image" src="images/cpu.png" >
+                </div>
+                <div class="wrapper">
+                    <span class="niddle">|</span>
+                    <div class="simulator">
+                        
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-
-
-    <div class="simulator-viewport col-lg-5" id="sjf-simulator">
-        <div class="ready-queue">
-            
-        </div>
-
-
-        <div class="current-task">
-            <span class="text-detail">SJF</span>
-            <img class="cpu-image" src="images/cpu.png" >
-        </div>
-        <div class="wrapper">
-            <span class="niddle">|</span>
-            <div class="simulator">
+        <div class="col-lg-5 processes">
+            <table id="processes" class="table table-striped">
+                <thead>
+                <tr>
+                    <th class="serial">#</th>
+                    <th class="arrive-at">Arrives at</th>
+                    <th class="busrt-time">Burst time</th>
+                    
+                </tr>
+                </thead>
+                <tbody class="page">
                 
-            </div>
+                </tbody>
+            </table>
         </div>
     </div>
-
-    <table id="processes" class="table table-striped">
-        <thead>
-        <tr>
-            <th class="serial">#</th>
-            <th class="name">Name</th>
-            <th class="arrive-at">Arrives at</th>
-            <th class="busrt-time">CPU Burst time</th>
-            <th class="deadline">Deadline</th>
-        </tr>
-        </thead>
-        <tbody class="page">
-        
-        </tbody>
-    </table>
 
     
 </div> <!-- /.container -->
@@ -129,24 +132,24 @@
 <script type="text/template" id="process-list-template">
 {{ _.each(processes.models, function(process) { }}
 <tr class="data-row">
-    <td class="serial">{{=process.attributes.serial}}</td>
-    <td class="name">{{=process.attributes.name}}</td>
+    <td class="serial"><span class="indicator task-serial-{{=process.attributes.serial}}">&nbsp;</span> {{=process.attributes.serial}}</td>
+    
     <td class="arrive-at">{{=process.attributes.arrive_at}}</td>
     <td class="busrt-time">{{=process.attributes.burst_time}}</td>
-    <td class="deadline">{{=process.attributes.deadline}}</td>
+    
 </tr>
 {{ }) }}
 </script>
 <script type="text/template" id="task-template">
 {{ _.each(tasks.models, function(task) { }}
-<div class="task task-{{=task.get('type')}} taks-serial-{{=task.get('process_serial') }}"
+<div class="task task-{{=task.get('type')}} task-serial-{{=task.attributes.process_serial }}"
     data-task-id="{{=task.id}}"
     data-task-start="{{=task.get('time')}}"
     data-task-duration="{{=task.get('duration')}}"
     data-task-type="{{=task.get('type')}}"
     style="width: {{=task.get('duration') * 20}}px;" >
     {{ if(task.get('type') === 'process') { }}
-        <span class="process-serial">{{=task.get('type')}}: {{=task.get('process').get('serial')}}</span>
+        <span class="process-serial">p#{{=task.get('process').get('serial')}}</span>
     {{ } else { }}
         <span class="process-serial">{{=task.get('type')}}</span>
     {{ } }}
@@ -166,6 +169,12 @@
 <script src="javascripts/models/CPU.js"></script>
 <script src="javascripts/models/Task.js"></script>
 
+<script src="javascripts/modules/AppHelpers.js"></script>
+<script src="javascripts/modules/AlgorithmFIFO.js"></script>
+<script src="javascripts/modules/AlgorithmRR.js"></script>
+<script src="javascripts/modules/AlgorithmSJF.js"></script>
+
+
 <script src="javascripts/collections/Processes.js"></script>
 <script src="javascripts/collections/Tasks.js"></script>
 
@@ -175,10 +184,6 @@
 
 <script src="javascripts/controllers/HomeController.js"></script>
 
-<script src="javascripts/modules/AppHelpers.js"></script>
-<script src="javascripts/modules/AlgorithmFIFO.js"></script>
-<script src="javascripts/modules/AlgorithmRR.js"></script>
-<script src="javascripts/modules/AlgorithmSJF.js"></script>
 
 
 <script src="javascripts/bootstrap.js"></script>

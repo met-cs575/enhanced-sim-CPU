@@ -1,7 +1,7 @@
 App.View.Viewport = Backbone.View.extend({
   initialize: function() {
      //console.log("viewport initialized");
-    $(".how-many-processes").val(5);
+    //$(".how-many-processes").val(5);
     //$(".how-many-processes").val();
     App.Global.howManyProcesses = parseInt($(".how-many-processes").val(), 10);
   },
@@ -11,9 +11,12 @@ App.View.Viewport = Backbone.View.extend({
   },
   events: {
     // Bind event here
-    //'click a.generate-processes': App.Module.generateProcesses(10),
-    //'change input.how-many-processes': 'setHowManyProcesses',
-    //'submit form.set-how-many-processes': App.Module.generateProcesses(10)
+    'click .start-simulation': 'startSimulation',
+    'change input.how-many-processes': 'setHowManyProcesses'
+  },
+
+  startSimulation: function(ev) {
+    App.Controller.HomeController.start();
   },
   setHowManyProcesses: function(ev) {
     self = ev.currentTarget;

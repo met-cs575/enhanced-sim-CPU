@@ -2,7 +2,662 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 8, ../sass/screen.scss */
+/* line 1, ../sass/_taskColors.scss */
+.task-serial-0 {
+  background: Blue !important;
+}
+
+/* line 2, ../sass/_taskColors.scss */
+.task-serial-1 {
+  background: BlueViolet !important;
+}
+
+/* line 3, ../sass/_taskColors.scss */
+.task-serial-2 {
+  background: Brown !important;
+}
+
+/* line 4, ../sass/_taskColors.scss */
+.task-serial-3 {
+  background: BurlyWood !important;
+}
+
+/* line 5, ../sass/_taskColors.scss */
+.task-serial-4 {
+  background: CadetBlue !important;
+}
+
+/* line 6, ../sass/_taskColors.scss */
+.task-serial-5 {
+  background: Chartreuse !important;
+}
+
+/* line 7, ../sass/_taskColors.scss */
+.task-serial-6 {
+  background: Chocolate !important;
+}
+
+/* line 8, ../sass/_taskColors.scss */
+.task-serial-7 {
+  background: Coral !important;
+}
+
+/* line 9, ../sass/_taskColors.scss */
+.task-serial-8 {
+  background: CornflowerBlue !important;
+}
+
+/* line 10, ../sass/_taskColors.scss */
+.task-serial-9 {
+  background: Cornsilk !important;
+}
+
+/* line 11, ../sass/_taskColors.scss */
+.task-serial-10 {
+  background: Crimson !important;
+}
+
+/* line 12, ../sass/_taskColors.scss */
+.task-serial-11 {
+  background: Cyan !important;
+}
+
+/* line 13, ../sass/_taskColors.scss */
+.task-serial-12 {
+  background: DarkBlue !important;
+}
+
+/* line 14, ../sass/_taskColors.scss */
+.task-serial-13 {
+  background: DarkCyan !important;
+}
+
+/* line 15, ../sass/_taskColors.scss */
+.task-serial-14 {
+  background: DarkGoldenRod !important;
+}
+
+/* line 16, ../sass/_taskColors.scss */
+.task-serial-15 {
+  background: DarkGray !important;
+}
+
+/* line 17, ../sass/_taskColors.scss */
+.task-serial-16 {
+  background: DarkGreen !important;
+}
+
+/* line 18, ../sass/_taskColors.scss */
+.task-serial-17 {
+  background: DarkKhaki !important;
+}
+
+/* line 19, ../sass/_taskColors.scss */
+.task-serial-18 {
+  background: DarkMagenta !important;
+}
+
+/* line 20, ../sass/_taskColors.scss */
+.task-serial-19 {
+  background: DarkOliveGreen !important;
+}
+
+/* line 21, ../sass/_taskColors.scss */
+.task-serial-20 {
+  background: DarkOrange !important;
+}
+
+/* line 22, ../sass/_taskColors.scss */
+.task-serial-21 {
+  background: DarkOrchid !important;
+}
+
+/* line 23, ../sass/_taskColors.scss */
+.task-serial-22 {
+  background: DarkRed !important;
+}
+
+/* line 24, ../sass/_taskColors.scss */
+.task-serial-23 {
+  background: DarkSalmon !important;
+}
+
+/* line 25, ../sass/_taskColors.scss */
+.task-serial-24 {
+  background: DarkSeaGreen !important;
+}
+
+/* line 26, ../sass/_taskColors.scss */
+.task-serial-25 {
+  background: DarkSlateBlue !important;
+}
+
+/* line 27, ../sass/_taskColors.scss */
+.task-serial-26 {
+  background: DarkSlateGray !important;
+}
+
+/* line 28, ../sass/_taskColors.scss */
+.task-serial-27 {
+  background: DarkTurquoise !important;
+}
+
+/* line 29, ../sass/_taskColors.scss */
+.task-serial-28 {
+  background: DarkViolet !important;
+}
+
+/* line 30, ../sass/_taskColors.scss */
+.task-serial-29 {
+  background: DeepPink !important;
+}
+
+/* line 31, ../sass/_taskColors.scss */
+.task-serial-30 {
+  background: DeepSkyBlue !important;
+}
+
+/* line 32, ../sass/_taskColors.scss */
+.task-serial-31 {
+  background: DimGray !important;
+}
+
+/* line 33, ../sass/_taskColors.scss */
+.task-serial-32 {
+  background: DodgerBlue !important;
+}
+
+/* line 34, ../sass/_taskColors.scss */
+.task-serial-33 {
+  background: FireBrick !important;
+}
+
+/* line 35, ../sass/_taskColors.scss */
+.task-serial-34 {
+  background: FloralWhite !important;
+}
+
+/* line 36, ../sass/_taskColors.scss */
+.task-serial-35 {
+  background: ForestGreen !important;
+}
+
+/* line 37, ../sass/_taskColors.scss */
+.task-serial-36 {
+  background: Fuchsia !important;
+}
+
+/* line 38, ../sass/_taskColors.scss */
+.task-serial-37 {
+  background: Gainsboro !important;
+}
+
+/* line 39, ../sass/_taskColors.scss */
+.task-serial-38 {
+  background: GhostWhite !important;
+}
+
+/* line 40, ../sass/_taskColors.scss */
+.task-serial-39 {
+  background: Gold !important;
+}
+
+/* line 41, ../sass/_taskColors.scss */
+.task-serial-40 {
+  background: GoldenRod !important;
+}
+
+/* line 42, ../sass/_taskColors.scss */
+.task-serial-41 {
+  background: Gray !important;
+}
+
+/* line 43, ../sass/_taskColors.scss */
+.task-serial-42 {
+  background: Green !important;
+}
+
+/* line 44, ../sass/_taskColors.scss */
+.task-serial-43 {
+  background: GreenYellow !important;
+}
+
+/* line 45, ../sass/_taskColors.scss */
+.task-serial-44 {
+  background: HoneyDew !important;
+}
+
+/* line 46, ../sass/_taskColors.scss */
+.task-serial-45 {
+  background: HotPink !important;
+}
+
+/* line 47, ../sass/_taskColors.scss */
+.task-serial-46 {
+  background: IndianRed !important;
+}
+
+/* line 48, ../sass/_taskColors.scss */
+.task-serial-47 {
+  background: Indigo !important;
+}
+
+/* line 49, ../sass/_taskColors.scss */
+.task-serial-48 {
+  background: Ivory !important;
+}
+
+/* line 50, ../sass/_taskColors.scss */
+.task-serial-49 {
+  background: Khaki !important;
+}
+
+/* line 51, ../sass/_taskColors.scss */
+.task-serial-50 {
+  background: Lavender !important;
+}
+
+/* line 52, ../sass/_taskColors.scss */
+.task-serial-51 {
+  background: LavenderBlush !important;
+}
+
+/* line 53, ../sass/_taskColors.scss */
+.task-serial-52 {
+  background: LawnGreen !important;
+}
+
+/* line 54, ../sass/_taskColors.scss */
+.task-serial-53 {
+  background: LemonChiffon !important;
+}
+
+/* line 55, ../sass/_taskColors.scss */
+.task-serial-54 {
+  background: LightBlue !important;
+}
+
+/* line 56, ../sass/_taskColors.scss */
+.task-serial-55 {
+  background: LightCoral !important;
+}
+
+/* line 57, ../sass/_taskColors.scss */
+.task-serial-56 {
+  background: LightCyan !important;
+}
+
+/* line 58, ../sass/_taskColors.scss */
+.task-serial-57 {
+  background: LightGoldenRodYellow !important;
+}
+
+/* line 59, ../sass/_taskColors.scss */
+.task-serial-58 {
+  background: LightGray !important;
+}
+
+/* line 60, ../sass/_taskColors.scss */
+.task-serial-59 {
+  background: LightGreen !important;
+}
+
+/* line 61, ../sass/_taskColors.scss */
+.task-serial-60 {
+  background: LightPink !important;
+}
+
+/* line 62, ../sass/_taskColors.scss */
+.task-serial-61 {
+  background: LightSalmon !important;
+}
+
+/* line 63, ../sass/_taskColors.scss */
+.task-serial-62 {
+  background: LightSeaGreen !important;
+}
+
+/* line 64, ../sass/_taskColors.scss */
+.task-serial-63 {
+  background: LightSkyBlue !important;
+}
+
+/* line 65, ../sass/_taskColors.scss */
+.task-serial-64 {
+  background: LightSlateGray !important;
+}
+
+/* line 66, ../sass/_taskColors.scss */
+.task-serial-65 {
+  background: LightSteelBlue !important;
+}
+
+/* line 67, ../sass/_taskColors.scss */
+.task-serial-66 {
+  background: LightYellow !important;
+}
+
+/* line 68, ../sass/_taskColors.scss */
+.task-serial-67 {
+  background: Lime !important;
+}
+
+/* line 69, ../sass/_taskColors.scss */
+.task-serial-68 {
+  background: LimeGreen !important;
+}
+
+/* line 70, ../sass/_taskColors.scss */
+.task-serial-69 {
+  background: Linen !important;
+}
+
+/* line 71, ../sass/_taskColors.scss */
+.task-serial-70 {
+  background: Magenta !important;
+}
+
+/* line 72, ../sass/_taskColors.scss */
+.task-serial-71 {
+  background: Maroon !important;
+}
+
+/* line 73, ../sass/_taskColors.scss */
+.task-serial-72 {
+  background: MediumAquaMarine !important;
+}
+
+/* line 74, ../sass/_taskColors.scss */
+.task-serial-73 {
+  background: MediumBlue !important;
+}
+
+/* line 75, ../sass/_taskColors.scss */
+.task-serial-74 {
+  background: MediumOrchid !important;
+}
+
+/* line 76, ../sass/_taskColors.scss */
+.task-serial-75 {
+  background: MediumPurple !important;
+}
+
+/* line 77, ../sass/_taskColors.scss */
+.task-serial-76 {
+  background: MediumSeaGreen !important;
+}
+
+/* line 78, ../sass/_taskColors.scss */
+.task-serial-77 {
+  background: MediumSlateBlue !important;
+}
+
+/* line 79, ../sass/_taskColors.scss */
+.task-serial-78 {
+  background: MediumSpringGreen !important;
+}
+
+/* line 80, ../sass/_taskColors.scss */
+.task-serial-79 {
+  background: MediumTurquoise !important;
+}
+
+/* line 81, ../sass/_taskColors.scss */
+.task-serial-80 {
+  background: MediumVioletRed !important;
+}
+
+/* line 82, ../sass/_taskColors.scss */
+.task-serial-81 {
+  background: MidnightBlue !important;
+}
+
+/* line 83, ../sass/_taskColors.scss */
+.task-serial-82 {
+  background: MintCream !important;
+}
+
+/* line 84, ../sass/_taskColors.scss */
+.task-serial-83 {
+  background: MistyRose !important;
+}
+
+/* line 85, ../sass/_taskColors.scss */
+.task-serial-84 {
+  background: Moccasin !important;
+}
+
+/* line 86, ../sass/_taskColors.scss */
+.task-serial-85 {
+  background: NavajoWhite !important;
+}
+
+/* line 87, ../sass/_taskColors.scss */
+.task-serial-86 {
+  background: Navy !important;
+}
+
+/* line 88, ../sass/_taskColors.scss */
+.task-serial-87 {
+  background: OldLace !important;
+}
+
+/* line 89, ../sass/_taskColors.scss */
+.task-serial-88 {
+  background: Olive !important;
+}
+
+/* line 90, ../sass/_taskColors.scss */
+.task-serial-89 {
+  background: OliveDrab !important;
+}
+
+/* line 91, ../sass/_taskColors.scss */
+.task-serial-90 {
+  background: Orange !important;
+}
+
+/* line 92, ../sass/_taskColors.scss */
+.task-serial-91 {
+  background: OrangeRed !important;
+}
+
+/* line 93, ../sass/_taskColors.scss */
+.task-serial-92 {
+  background: Orchid !important;
+}
+
+/* line 94, ../sass/_taskColors.scss */
+.task-serial-93 {
+  background: PaleGoldenRod !important;
+}
+
+/* line 95, ../sass/_taskColors.scss */
+.task-serial-94 {
+  background: PaleGreen !important;
+}
+
+/* line 96, ../sass/_taskColors.scss */
+.task-serial-95 {
+  background: PaleTurquoise !important;
+}
+
+/* line 97, ../sass/_taskColors.scss */
+.task-serial-96 {
+  background: PaleVioletRed !important;
+}
+
+/* line 98, ../sass/_taskColors.scss */
+.task-serial-97 {
+  background: PapayaWhip !important;
+}
+
+/* line 99, ../sass/_taskColors.scss */
+.task-serial-98 {
+  background: PeachPuff !important;
+}
+
+/* line 100, ../sass/_taskColors.scss */
+.task-serial-99 {
+  background: Peru !important;
+}
+
+/* line 101, ../sass/_taskColors.scss */
+.task-serial-100 {
+  background: Pink !important;
+}
+
+/* line 102, ../sass/_taskColors.scss */
+.task-serial-101 {
+  background: Plum !important;
+}
+
+/* line 103, ../sass/_taskColors.scss */
+.task-serial-102 {
+  background: PowderBlue !important;
+}
+
+/* line 104, ../sass/_taskColors.scss */
+.task-serial-103 {
+  background: Purple !important;
+}
+
+/* line 105, ../sass/_taskColors.scss */
+.task-serial-104 {
+  background: Red !important;
+}
+
+/* line 106, ../sass/_taskColors.scss */
+.task-serial-105 {
+  background: RosyBrown !important;
+}
+
+/* line 107, ../sass/_taskColors.scss */
+.task-serial-106 {
+  background: RoyalBlue !important;
+}
+
+/* line 108, ../sass/_taskColors.scss */
+.task-serial-107 {
+  background: SaddleBrown !important;
+}
+
+/* line 109, ../sass/_taskColors.scss */
+.task-serial-108 {
+  background: Salmon !important;
+}
+
+/* line 110, ../sass/_taskColors.scss */
+.task-serial-109 {
+  background: SandyBrown !important;
+}
+
+/* line 111, ../sass/_taskColors.scss */
+.task-serial-110 {
+  background: SeaGreen !important;
+}
+
+/* line 112, ../sass/_taskColors.scss */
+.task-serial-111 {
+  background: SeaShell !important;
+}
+
+/* line 113, ../sass/_taskColors.scss */
+.task-serial-112 {
+  background: Sienna !important;
+}
+
+/* line 114, ../sass/_taskColors.scss */
+.task-serial-113 {
+  background: Silver !important;
+}
+
+/* line 115, ../sass/_taskColors.scss */
+.task-serial-114 {
+  background: SkyBlue !important;
+}
+
+/* line 116, ../sass/_taskColors.scss */
+.task-serial-115 {
+  background: SlateBlue !important;
+}
+
+/* line 117, ../sass/_taskColors.scss */
+.task-serial-116 {
+  background: SlateGray !important;
+}
+
+/* line 118, ../sass/_taskColors.scss */
+.task-serial-117 {
+  background: Snow !important;
+}
+
+/* line 119, ../sass/_taskColors.scss */
+.task-serial-118 {
+  background: SpringGreen !important;
+}
+
+/* line 120, ../sass/_taskColors.scss */
+.task-serial-119 {
+  background: SteelBlue !important;
+}
+
+/* line 121, ../sass/_taskColors.scss */
+.task-serial-120 {
+  background: Tan !important;
+}
+
+/* line 122, ../sass/_taskColors.scss */
+.task-serial-121 {
+  background: Teal !important;
+}
+
+/* line 123, ../sass/_taskColors.scss */
+.task-serial-122 {
+  background: Thistle !important;
+}
+
+/* line 124, ../sass/_taskColors.scss */
+.task-serial-123 {
+  background: Tomato !important;
+}
+
+/* line 125, ../sass/_taskColors.scss */
+.task-serial-124 {
+  background: Turquoise !important;
+}
+
+/* line 126, ../sass/_taskColors.scss */
+.task-serial-125 {
+  background: Violet !important;
+}
+
+/* line 127, ../sass/_taskColors.scss */
+.task-serial-126 {
+  background: Wheat !important;
+}
+
+/* line 128, ../sass/_taskColors.scss */
+.task-serial-127 {
+  background: White !important;
+}
+
+/* line 129, ../sass/_taskColors.scss */
+.task-serial-128 {
+  background: WhiteSmoke !important;
+}
+
+/* line 130, ../sass/_taskColors.scss */
+.task-serial-129 {
+  background: Yellow !important;
+}
+
+/* line 131, ../sass/_taskColors.scss */
+.task-serial-130 {
+  background: YellowGreen !important;
+}
+
+/* line 9, ../sass/screen.scss */
 body {
   background-color: white;
   font-family: "Helvetica Neue";
@@ -10,7 +665,7 @@ body {
   color: #666666;
 }
 
-/* line 15, ../sass/screen.scss */
+/* line 16, ../sass/screen.scss */
 footer.footer {
   position: absolute;
   width: 100%;
@@ -22,7 +677,19 @@ footer.footer {
   display: block;
 }
 
-/* line 51, ../sass/screen.scss */
+/* line 27, ../sass/screen.scss */
+.processes .indicator {
+  display: inline-block;
+  height: 100%;
+  width: 20px;
+}
+
+/* line 34, ../sass/screen.scss */
+#processes table th.serial td.serial {
+  width: 40px;
+}
+
+/* line 57, ../sass/screen.scss */
 .wrapper {
   overflow: scroll;
   width: 100%;
@@ -30,7 +697,7 @@ footer.footer {
   padding: 0;
   position: relative;
 }
-/* line 57, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
 .wrapper .niddle {
   position: absolute;
   display: block;
@@ -44,20 +711,20 @@ footer.footer {
   color: transparent;
 }
 
-/* line 71, ../sass/screen.scss */
+/* line 77, ../sass/screen.scss */
 .simulator-viewport {
   border: 1px #ccc solid;
   margin-top: 20px;
   box-sizing: border-box;
   position: relative;
 }
-/* line 76, ../sass/screen.scss */
+/* line 82, ../sass/screen.scss */
 .simulator-viewport .current-task img.cpu-image {
   display: block;
   margin: 0 auto;
   width: 40%;
 }
-/* line 81, ../sass/screen.scss */
+/* line 87, ../sass/screen.scss */
 .simulator-viewport .current-task span.text-detail {
   position: absolute;
   display: block;
@@ -71,12 +738,12 @@ footer.footer {
   box-sizing: border-box;
 }
 
-/* line 95, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 .simulator {
   width: 65536px;
   height: 75px;
 }
-/* line 99, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 .simulator ul.ruler {
   clear: both;
   margin: 0;
@@ -89,7 +756,7 @@ footer.footer {
   border-bottom: 1px #333333 solid;
   margin-bottom: 5px;
 }
-/* line 106, ../sass/screen.scss */
+/* line 112, ../sass/screen.scss */
 .simulator ul.ruler li {
   font-size: 0.8em;
   display: block;
@@ -104,17 +771,17 @@ footer.footer {
   border-left: 1px solid #333;
   overflow: show;
 }
-/* line 120, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 .simulator ul.ruler li:first-child:before {
   position: absolute;
   left: 0;
   content: '0';
 }
-/* line 125, ../sass/screen.scss */
+/* line 131, ../sass/screen.scss */
 .simulator ul.ruler li:last-child {
   border-right: 1px solid #333;
 }
-/* line 135, ../sass/screen.scss */
+/* line 141, ../sass/screen.scss */
 .simulator div.task {
   display: block;
   float: left;
@@ -130,35 +797,7 @@ footer.footer {
   padding: 5px;
   margin: 0;
 }
-/* line 151, ../sass/screen.scss */
+/* line 157, ../sass/screen.scss */
 .simulator div.task-process {
   background: #049cdb;
-}
-/* line 155, ../sass/screen.scss */
-.simulator div.taks-serial-0 {
-  background: #ffffd9;
-}
-/* line 159, ../sass/screen.scss */
-.simulator div.taks-serial-1 {
-  background: #049cdb;
-}
-/* line 163, ../sass/screen.scss */
-.simulator div.taks-serial-2 {
-  background: #04bcdb;
-}
-/* line 167, ../sass/screen.scss */
-.simulator div.taks-serial-3 {
-  background: #249cdb;
-}
-/* line 171, ../sass/screen.scss */
-.simulator div.taks-serial-4 {
-  background: #049cdb;
-}
-/* line 175, ../sass/screen.scss */
-.simulator div.taks-serial-5 {
-  background: #049cfb;
-}
-/* line 179, ../sass/screen.scss */
-.simulator div.taks-serial-6 {
-  background: #04dcdb;
 }

@@ -4,6 +4,7 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "_variables";
+@import "_taskColors.scss";
 
 body {
   background-color: $mainBackground;
@@ -23,20 +24,25 @@ footer.footer {
   display: block;
 }
 
+.processes .indicator {
+  display: inline-block;
+  height: 100%;
+  width: 20px;
+}
+#processes {
+  table {
+    th.serial td.serial {
+      width: 40px;
+    }
+  }
+  
+}
+
 
 $blue: #049cdb !default;
 $blueDark: #0064cd !default;
 $green: #46a546 !default;
 $red: #9d261d !default;
-
-$task0: #ffffd9;
-$task1: #049cdb;
-$task2: #04bcdb;
-$task3: #249cdb;
-$task4: #049cdb;
-$task5: #049cfb;
-$task6: #04dcdb;
-
 
 $taskBlockWidth: 50px;
 $taskBlockHeight:50px;
@@ -151,34 +157,5 @@ $wrapperHeight: $taskBlockHeight + $rulerHeight * 5;
   div.task-process {
     background: $taskTypeProcess;
   }
-
-  div.taks-serial-0 {
-    background: $task0;
-  }
-
-  div.taks-serial-1 {
-    background: $task1;
-  }
-
-  div.taks-serial-2 {
-    background: $task2;
-  }
-
-  div.taks-serial-3 {
-    background: $task3;
-  }
-
-  div.taks-serial-4 {
-    background: $task4;
-  }
-
-  div.taks-serial-5 {
-    background: $task5;
-  }
-
-  div.taks-serial-6 {
-    background: $task6;
-  }
-
   
 }

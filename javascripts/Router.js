@@ -2,7 +2,7 @@
 App.Router = Backbone.Router.extend({
   routes: {
     '': App.Controller.HomeController.index(),
-    'generate_processes': 'generateProcesses'
+    //'generate_processes': App.Controller.HomeController.generateProcesses(),
   }
 });
 

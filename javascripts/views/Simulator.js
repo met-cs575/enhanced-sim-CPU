@@ -15,7 +15,7 @@ App.View.Simulator = Backbone.View.extend({
     var cursor = this.$el.find('.niddle').eq(0);
     cursor.css('left', x);
     var atTime = x;
-    this.$el.find('.current-task span.text-detail').text(x);
+    //this.$el.find('.current-task span.text-detail').text(x);
     
     return false;
   },
@@ -26,6 +26,7 @@ App.View.Simulator = Backbone.View.extend({
     return tasks = App.Module.AlgorithmFIFO(App.Global.processes);
   },
   render: function(){
+    this.$el.find('.simulator').eq(0).html('');
     var resTasks = this.runAlgorithm();
     var template = _.template($('#task-template').html(), {tasks: resTasks} );
     this.$el.find('.simulator').eq(0).append(template);
