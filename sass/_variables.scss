@@ -9,3 +9,14 @@ $warning: yellow;
 $info: green;
 $mainColor: #666;
 $mainBackground: #fff;
+
+$taskBlockWidth: 50px;
+$taskBlockHeight:50px;
+$taskBorderColor: #ccc;
+$taskBorderWidth: 1px;
+$taskPadding: 5px;
+$taskTypeProcess: $blue;
+$taskTypeContextSwitch: $blueDark;
+$taskTypeAlgorithm: $red;
+$rulerHeight: 5px;
+$wrapperHeight: $taskBlockHeight + $rulerHeight * 5;

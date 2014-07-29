@@ -35,7 +35,9 @@ App.View.Simulator = Backbone.View.extend({
     var lastTask = self.$el.find('.simulator .task:last');
     //console.log(lastTask.outerWidth());
     var rightBorder = lastTask.position().left + lastTask.outerWidth();
-    self.$el.find('.simulator').css('width', rightBorder);
+    //self.$el.find('.simulator').css('width', rightBorder);
+    self.$el.find('.simulator').css('width', 65535);
+    //tgt.css({'width': rightBorder});
     tgt.css({'width': rightBorder});
     
     this.timer = setInterval(function(){

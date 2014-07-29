@@ -42,40 +42,16 @@
     <div class="row">
         <div class="simulators col-lg-7">
             <div class="simulator-viewport " id="fifo-simulator">
-                <div class="ready-queue">
-                    
-                </div>
-
-
+                <div class="ready-queue"></div>
                 <div class="current-task">
                     <span class="text-detail">FIFO</span>
                     <img class="cpu-image" src="images/cpu.png" >
                 </div>
                 <div class="wrapper">
                     <span class="niddle">|</span>
-                    <div class="simulator">
-                        
-                    </div>
+                    <div class="simulator"></div>
                 </div>
-            </div>
-
-            <div class="simulator-viewport " id="rr-simulator">
-                <div class="ready-queue">
-                    
-                </div>
-
-
-                <div class="current-task">
-                    <span class="text-detail">Round-Robin</span>
-                    <img class="cpu-image" src="images/cpu.png" >
-                </div>
-                <div class="wrapper">
-                    <span class="niddle">|</span>
-                    <div class="simulator">
-                        
-                    </div>
-                </div>
-            </div>
+            </div><!-- /#sjf-simulator -->
 
             <div class="simulator-viewport " id="sjf-simulator">
                 <div class="ready-queue"> 
@@ -91,7 +67,21 @@
                         
                     </div>
                 </div>
-            </div>
+            </div><!-- /#sjf-simulator -->
+
+            <div class="simulator-viewport " id="rr-simulator">
+                <div class="ready-queue">
+                </div>
+
+                <div class="current-task">
+                    <span class="text-detail">Round-Robin</span>
+                    <img class="cpu-image" src="images/cpu.png" >
+                </div>
+                <div class="wrapper">
+                    <span class="niddle">|</span>
+                    <div class="simulator"></div>
+                </div>
+            </div> <!-- /#rr-simulator -->
         </div> <!-- /.simulators -->
         <div class="col-lg-5 processes">
             <table id="processes" class="table table-striped">
