@@ -6,6 +6,7 @@ App.Controller.HomeController = {
     processList.render();
     simulatorFIFO.render();
     simulatorRR.render();
+    simulatorSJF.render();
     //$('div.result').append(output);
     // processList.render();
   }

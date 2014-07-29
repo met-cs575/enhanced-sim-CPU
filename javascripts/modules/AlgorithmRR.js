@@ -5,7 +5,8 @@ App.Module.AlgorithmRR = function(processes, atTime) {
   atTime = typeof atTime == 'undefined' ? 0 : atTime;
 
   // Make a clone of input processes so the original data won't be changed.
-  var theseProcesses = processes.clone();
+  var theseProcesses = new App.Collection.Processes(processes.toJSON());
+  //theseProcesses processes.clone();
   // Sort collection by the arrive time.
   theseProcesses.comparator = 'arrive_at';
   theseProcesses.sort();
@@ -14,11 +15,12 @@ App.Module.AlgorithmRR = function(processes, atTime) {
   var count = 0
 
   var queue = new Array();
-  var time = 0.0;
+  // var time = 0.0;
+  var time = 0;
   var idleStart = 0;
   var idleEnd = 0;
   var idling = false;
-
+  var arrivals = null;
   // Build the tasks
   while(theseProcesses.length > 0) {
     arrivals = theseProcesses.atTime(time);
@@ -36,6 +38,7 @@ App.Module.AlgorithmRR = function(processes, atTime) {
         idleStart = time;
         idling = true;
       }
+      time += 1;
     } else {
       if(idling) {
         idleEnd = time;
@@ -70,10 +73,11 @@ App.Module.AlgorithmRR = function(processes, atTime) {
       task.set('type', 'process');
       task.set('process', runningTask);
       task.set('time', time);
+      task.set('process_serial', runningTask.get('serial'));
       tasks.add(task);
       time += quantum;
     }
-    time += 0.1;
+    
 
   }
   return tasks;

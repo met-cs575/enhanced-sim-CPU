@@ -15,6 +15,7 @@ App.View.Simulator = Backbone.View.extend({
     var cursor = this.$el.find('.niddle').eq(0);
     cursor.css('left', x);
     var atTime = x;
+    this.$el.find('.current-task span.text-detail').text(x);
     
     return false;
   },
@@ -46,6 +47,8 @@ var simulatorFIFO = new App.View.SimulatorFIFO();
 App.View.SimulatorRR = App.View.Simulator.extend({
   el: '#rr-simulator',
   runAlgorithm: function() {
+    //debugger;
+    console.log('runAlgorithm');
     return App.Module.AlgorithmRR(App.Global.processes);
   }
 });

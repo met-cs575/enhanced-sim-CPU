@@ -29,6 +29,14 @@ $blueDark: #0064cd !default;
 $green: #46a546 !default;
 $red: #9d261d !default;
 
+$task0: #ffffd9;
+$task1: #049cdb;
+$task2: #04bcdb;
+$task3: #249cdb;
+$task4: #049cdb;
+$task5: #049cfb;
+$task6: #04dcdb;
+
 
 $taskBlockWidth: 50px;
 $taskBlockHeight:50px;
@@ -38,10 +46,12 @@ $taskPadding: 5px;
 $taskTypeProcess: $blue;
 $taskTypeContextSwitch: $blueDark;
 $taskTypeAlgorithm: $red;
+$rulerHeight: 5px;
+$wrapperHeight: $taskBlockHeight + $rulerHeight * 5;
 .wrapper {
   overflow: scroll;
   width: 100%;
-  height: $taskBlockHeight;
+  height: $wrapperHeight;
   padding:0;
   position: relative;
   .niddle {
@@ -62,16 +72,66 @@ $taskTypeAlgorithm: $red;
   border: 1px #ccc solid;
   margin-top: 20px;
   box-sizing: border-box;
+  position: relative;
   .current-task img.cpu-image {
     display: block;
     margin: 0 auto;
     width: 40%;
   }
+  .current-task span.text-detail {
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+    box-sizing: border-box;
+  }
 
 }
 .simulator {
   width: 65536px;
-  height: $taskBlockHeight;
+  height: $wrapperHeight;
+  $timeUnitWidth: 20px;
+  ul.ruler {
+    clear: both;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    width:auto;
+    li {
+      font-size: 0.8em;
+      display: block;
+      float: left;
+      padding-left: 1em;
+      padding-top: 2px;
+      width: $timeUnitWidth ;
+      text-align: left;
+      margin: 0;
+      height: $rulerHeight;
+      box-sizing: border-box;
+      border-left: 1px solid #333;
+      overflow: show;
+    }
+    li:first-child:before {
+      position: absolute;
+      left: 0;
+      content: '0';
+    }
+    li:last-child {
+      border-right: 1px solid #333;
+    }
+    
+    
+    height: $rulerHeight;
+    box-sizing: border-box;
+    border-bottom: 1px #333 solid ;
+    margin-bottom: 5px;
+  }
   div.task {
     display: block;
     float: left;
@@ -91,4 +151,34 @@ $taskTypeAlgorithm: $red;
   div.task-process {
     background: $taskTypeProcess;
   }
+
+  div.taks-serial-0 {
+    background: $task0;
+  }
+
+  div.taks-serial-1 {
+    background: $task1;
+  }
+
+  div.taks-serial-2 {
+    background: $task2;
+  }
+
+  div.taks-serial-3 {
+    background: $task3;
+  }
+
+  div.taks-serial-4 {
+    background: $task4;
+  }
+
+  div.taks-serial-5 {
+    background: $task5;
+  }
+
+  div.taks-serial-6 {
+    background: $task6;
+  }
+
+  
 }
