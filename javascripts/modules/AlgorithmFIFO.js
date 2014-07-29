@@ -21,6 +21,7 @@ App.Module.AlgorithmFIFO = function(processes, atTime) {
     var duration = 0;
     var type = '';
     var start_at = 0;
+    var processSerial = 'null';
 //debugger;
     if(arrive_at > time) { // means idle
       duration = p.get('arrive_at') - time;
@@ -31,6 +32,7 @@ App.Module.AlgorithmFIFO = function(processes, atTime) {
     } else { // means busy
       //arrive_at = time;
       duration = p.get('burst_time');
+      processSerial = p.get('serial');
       type = 'process';
       i++;
     }
@@ -44,6 +46,7 @@ App.Module.AlgorithmFIFO = function(processes, atTime) {
     task.set('process', p);
     task.set('duration', duration);
     task.set('time', time);
+    task.set('process_serial', processSerial);
     tasks.add(task);
     
     count++;
