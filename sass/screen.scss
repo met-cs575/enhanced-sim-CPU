@@ -46,10 +46,11 @@ $taskPadding: 5px;
 $taskTypeProcess: $blue;
 $taskTypeContextSwitch: $blueDark;
 $taskTypeAlgorithm: $red;
+$rulerHeight: 5px;
 .wrapper {
   overflow: scroll;
   width: 100%;
-  height: $taskBlockHeight;
+  height: $taskBlockHeight + $rulerHeight;
   padding:0;
   position: relative;
   .niddle {
@@ -70,16 +71,45 @@ $taskTypeAlgorithm: $red;
   border: 1px #ccc solid;
   margin-top: 20px;
   box-sizing: border-box;
+  position: relative;
   .current-task img.cpu-image {
     display: block;
     margin: 0 auto;
     width: 40%;
   }
+  .current-task span.text-detail {
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+    height: 100%;
+    line-height: 100%;
+    
+    text-align: center;
+    box-sizing: border-box;
+  }
 
 }
 .simulator {
   width: 65536px;
-  height: $taskBlockHeight;
+  height: $taskBlockHeight + $rulerHeight;
+  $timeUnitWideh: 20px;
+  div.ruler {
+    clear: both;
+    span.block {
+      display: block;
+      height: $rulerHeight;
+      box-sizing: border-box;
+      width: $timeUnitWideh;
+      float: left;
+      border-right: 1px #ccc solid;
+    }
+    display: block;
+    height: $rulerHeight * 2;
+    box-sizing: border-box;
+    border-bottom: 1px #ccc solid ;
+    margin-bottom: 5px;
+  }
   div.task {
     display: block;
     float: left;

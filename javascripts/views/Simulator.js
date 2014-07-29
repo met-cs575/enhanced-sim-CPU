@@ -15,6 +15,7 @@ App.View.Simulator = Backbone.View.extend({
     var cursor = this.$el.find('.niddle').eq(0);
     cursor.css('left', x);
     var atTime = x;
+    this.$el.find('.current-task span.text-detail').text(x);
     
     return false;
   },
