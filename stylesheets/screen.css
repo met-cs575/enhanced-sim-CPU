@@ -714,7 +714,7 @@ table#processes .indicator {
 /* line 69, ../sass/screen.scss */
 .wrapper .niddle {
   position: absolute;
-  display: block;
+  display: none;
   height: 50px;
   width: 5px;
   overflow: hidden;

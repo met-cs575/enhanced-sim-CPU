@@ -37,6 +37,7 @@ App.View.Viewport = Backbone.View.extend({
     App.Controller.HomeController.start();
     $('.pause-simulation').removeAttr('disabled');
     this.running = true;
+    ev.currentTarget.disabled = true;
   },
   setHowManyProcesses: function(ev) {
     self = ev.currentTarget;

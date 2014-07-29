@@ -68,7 +68,7 @@ $wrapperHeight: $taskBlockHeight + $rulerHeight * 5;
   position: relative;
   .niddle {
     position: absolute;
-    display: block;
+    display: none;
     height: $taskBlockHeight;
     width: 5px;
     overflow: hidden;

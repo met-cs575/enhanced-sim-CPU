@@ -30,11 +30,20 @@ App.View.Simulator = Backbone.View.extend({
     this.start();
   },
   doAnimation: function(tgt) {
+    clearInterval(this.timer);
     var self = this;
+    var lastTask = self.$el.find('.simulator .task:last');
+    //console.log(lastTask.outerWidth());
+    var rightBorder = lastTask.position().left + lastTask.outerWidth();
+    self.$el.find('.simulator').css('width', rightBorder);
+    tgt.css({'width': rightBorder});
+    
     this.timer = setInterval(function(){
-      tgt.css('left', '+=2');
-      var left = parseInt(tgt.css('left'), 10);
-      if(left > 65535) {
+      var left = parseInt(tgt.css('left'), 10)
+      left += 10;
+      //console.log(left);
+      tgt.css({'width': '-=10', 'left': left + 'px'});
+      if(left >= rightBorder) {
         clearInterval(self.timer);
       }
     }, 100);

@@ -135,7 +135,10 @@
 {{ }) }}
 </script>
 <script type="text/template" id="task-template">
-{{ _.each(tasks.models, function(task) { }}
+{{ var totalTime = 0;}}
+    
+{{ _.each(tasks.models, function(task) {}}
+    {{totalTime += task.attributes.duration;}}
 <div class="task task-{{=task.get('type')}} task-serial-{{=task.attributes.process_serial }}"
     data-task-id="{{=task.id}}"
     data-task-serial="{{=task.attributes.process_serial }}"
@@ -152,7 +155,7 @@
 {{ }) }}
 
 <ul class="ruler">
-{{ for(var i = 1; i < 100; i++) { }}
+{{ for(var i = 1; i <= totalTime; i++) { }}
     <li>{{=i }}</li>
 {{ } }}
 </ul>
