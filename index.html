@@ -28,7 +28,6 @@
     <h1>CPU Scheduling Simulator 2.0</h1>
     <hr>
     
-                
     <div class="input-group col-lg-3">
         <input class="how-many-processes form-control" type="number" value="10">
         <span class="input-group-addon">
@@ -37,9 +36,7 @@
         <span class="input-group-btn">
             <a class="btn btn-danger start-simulation ">Start</a>
         </span>
-    </div>
-
-    
+    </div><!-- /.input-group -->
     
     <div class="row">
         <div class="simulators col-lg-7">
@@ -94,7 +91,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> <!-- /.simulators -->
         <div class="col-lg-5 processes">
             <table id="processes" class="table table-striped">
                 <thead>
@@ -105,14 +102,10 @@
                     
                 </tr>
                 </thead>
-                <tbody class="page">
-                
-                </tbody>
+                <tbody class="page"></tbody>
             </table>
-        </div>
-    </div>
-
-    
+        </div> <!-- /.processes -->
+    </div> <!-- /.row -->
 </div> <!-- /.container -->
 
 <!--
@@ -161,20 +154,18 @@
     <li>{{=i }}</li>
 {{ } }}
 </ul>
-
 </script>
 
 <script src="javascripts/Application.js"></script>
-<script src="javascripts/models/Process.js"></script>
-<script src="javascripts/models/CPU.js"></script>
-<script src="javascripts/models/Task.js"></script>
-
 <script src="javascripts/modules/AppHelpers.js"></script>
 <script src="javascripts/modules/AlgorithmFIFO.js"></script>
 <script src="javascripts/modules/AlgorithmRR.js"></script>
 <script src="javascripts/modules/AlgorithmSJF.js"></script>
 
 
+<script src="javascripts/models/Process.js"></script>
+<script src="javascripts/models/CPU.js"></script>
+<script src="javascripts/models/Task.js"></script>
 <script src="javascripts/collections/Processes.js"></script>
 <script src="javascripts/collections/Tasks.js"></script>
 
@@ -184,15 +175,8 @@
 
 <script src="javascripts/controllers/HomeController.js"></script>
 
-
-
 <script src="javascripts/bootstrap.js"></script>
-
-
 <script src="javascripts/Router.js"></script>
-<script>
-    
-</script>
 
 <!-- outdatedBrowser -->
 <script src="lib/outdatedbrowser/outdatedBrowser.min.js"></script>
