@@ -685,11 +685,25 @@ footer.footer {
 }
 
 /* line 34, ../sass/screen.scss */
-#processes table th.serial td.serial {
-  width: 40px;
+table#processes th.serial, table#processes td.serial {
+  width: 80px;
+}
+/* line 37, ../sass/screen.scss */
+table#processes tr.current-task td {
+  background: #049cdb;
+  color: white;
+}
+/* line 41, ../sass/screen.scss */
+table#processes .indicator {
+  border: 1px solid white;
 }
 
-/* line 57, ../sass/screen.scss */
+/* line 48, ../sass/screen.scss */
+.pause-simulation {
+  margin-left: 20px;
+}
+
+/* line 63, ../sass/screen.scss */
 .wrapper {
   overflow: scroll;
   width: 100%;
@@ -697,7 +711,7 @@ footer.footer {
   padding: 0;
   position: relative;
 }
-/* line 63, ../sass/screen.scss */
+/* line 69, ../sass/screen.scss */
 .wrapper .niddle {
   position: absolute;
   display: block;
@@ -711,20 +725,20 @@ footer.footer {
   color: transparent;
 }
 
-/* line 77, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 .simulator-viewport {
   border: 1px #ccc solid;
   margin-top: 20px;
   box-sizing: border-box;
   position: relative;
 }
-/* line 82, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 .simulator-viewport .current-task img.cpu-image {
   display: block;
   margin: 0 auto;
   width: 40%;
 }
-/* line 87, ../sass/screen.scss */
+/* line 93, ../sass/screen.scss */
 .simulator-viewport .current-task span.text-detail {
   position: absolute;
   display: block;
@@ -738,12 +752,22 @@ footer.footer {
   box-sizing: border-box;
 }
 
-/* line 101, ../sass/screen.scss */
+/* line 107, ../sass/screen.scss */
 .simulator {
   width: 65536px;
   height: 75px;
 }
-/* line 105, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
+.simulator div.mask {
+  width: 100%;
+  position: absolute;
+  background: #fff;
+  height: 75px;
+  left: 0;
+  top: 0;
+  border-left: #ccc 2px solid;
+}
+/* line 120, ../sass/screen.scss */
 .simulator ul.ruler {
   clear: both;
   margin: 0;
@@ -756,7 +780,7 @@ footer.footer {
   border-bottom: 1px #333333 solid;
   margin-bottom: 5px;
 }
-/* line 112, ../sass/screen.scss */
+/* line 127, ../sass/screen.scss */
 .simulator ul.ruler li {
   font-size: 0.8em;
   display: block;
@@ -771,17 +795,17 @@ footer.footer {
   border-left: 1px solid #333;
   overflow: show;
 }
-/* line 126, ../sass/screen.scss */
+/* line 141, ../sass/screen.scss */
 .simulator ul.ruler li:first-child:before {
   position: absolute;
   left: 0;
   content: '0';
 }
-/* line 131, ../sass/screen.scss */
+/* line 146, ../sass/screen.scss */
 .simulator ul.ruler li:last-child {
   border-right: 1px solid #333;
 }
-/* line 141, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 .simulator div.task {
   display: block;
   float: left;
@@ -797,7 +821,7 @@ footer.footer {
   padding: 5px;
   margin: 0;
 }
-/* line 157, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
 .simulator div.task-process {
   background: #049cdb;
 }

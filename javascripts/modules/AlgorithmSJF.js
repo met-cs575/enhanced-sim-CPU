@@ -6,7 +6,6 @@ App.Module.AlgorithmSJF = function(processes, atTime) {
 
   // Make a clone of input processes so the original data won't be changed.
   var theseProcesses = new App.Collection.Processes(processes.toJSON());
-  console.log(App.Global.processes.toJSON());
   // Sort collection by the arrive time.
   theseProcesses.comparator = 'arrive_at';
   theseProcesses.sort();
@@ -32,7 +31,6 @@ App.Module.AlgorithmSJF = function(processes, atTime) {
       // Add processes to ready queue.
       //queue = queue.concat(arrivals);
       queue.add(arrivals);
-      console.log(queue);
       // Remove these processes from process list.
       theseProcesses.remove(arrivals);
     }
@@ -66,7 +64,6 @@ App.Module.AlgorithmSJF = function(processes, atTime) {
       queue.sort();
       // make a task from the process above.
       var runningTask = queue.shift();
-      console.log(runningTask);
       var task = new App.Model.Task();
       var duration = runningTask.get('burst_time');
       //debugger;

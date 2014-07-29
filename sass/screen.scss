@@ -29,20 +29,26 @@ footer.footer {
   height: 100%;
   width: 20px;
 }
-#processes {
-  table {
-    th.serial td.serial {
-      width: 40px;
-    }
+table#processes {
+   
+  th.serial, td.serial {
+    width: 80px;
   }
-  
+  tr.current-task td {
+    background: $blue;
+    color: white;
+  }
+  .indicator {
+    border: 1px solid white;
+    
+  }
+ 
 }
 
+.pause-simulation {
+  margin-left: 20px;
+}
 
-$blue: #049cdb !default;
-$blueDark: #0064cd !default;
-$green: #46a546 !default;
-$red: #9d261d !default;
 
 $taskBlockWidth: 50px;
 $taskBlockHeight:50px;
@@ -102,6 +108,15 @@ $wrapperHeight: $taskBlockHeight + $rulerHeight * 5;
   width: 65536px;
   height: $wrapperHeight;
   $timeUnitWidth: 20px;
+  div.mask {
+    width: 100%;
+    position: absolute;
+    background: #fff;
+    height: $wrapperHeight;
+    left: 0;
+    top: 0;
+    border-left: #ccc 2px solid;
+  }
   ul.ruler {
     clear: both;
     margin: 0;

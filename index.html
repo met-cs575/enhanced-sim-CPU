@@ -27,17 +27,18 @@
     </div>
     <h1>CPU Scheduling Simulator 2.0</h1>
     <hr>
-    
-    <div class="input-group col-lg-3">
-        <input class="how-many-processes form-control" type="number" value="10">
-        <span class="input-group-addon">
-            Processes
-        </span>
-        <span class="input-group-btn">
-            <a class="btn btn-danger start-simulation ">Start</a>
-        </span>
-    </div><!-- /.input-group -->
-    
+    <div class="row">
+        <div class="input-group col-lg-3 pull-left">
+            <input class="how-many-processes form-control" type="number" value="10">
+            <span class="input-group-addon">
+                Processes
+            </span>
+            <span class="input-group-btn">
+                <a class="btn btn-danger start-simulation ">Start</a>
+            </span>
+        </div><!-- /.input-group -->
+        <a class="btn btn-warning pause-simulation" disabled>Pause</a>
+    </div>
     <div class="row">
         <div class="simulators col-lg-7">
             <div class="simulator-viewport " id="fifo-simulator">
@@ -137,6 +138,7 @@
 {{ _.each(tasks.models, function(task) { }}
 <div class="task task-{{=task.get('type')}} task-serial-{{=task.attributes.process_serial }}"
     data-task-id="{{=task.id}}"
+    data-task-serial="{{=task.attributes.process_serial }}"
     data-task-start="{{=task.get('time')}}"
     data-task-duration="{{=task.get('duration')}}"
     data-task-type="{{=task.get('type')}}"
@@ -154,6 +156,7 @@
     <li>{{=i }}</li>
 {{ } }}
 </ul>
+<div class="mask"></div>
 </script>
 
 <script src="javascripts/Application.js"></script>

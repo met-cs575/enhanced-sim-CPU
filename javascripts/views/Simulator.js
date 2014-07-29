@@ -2,21 +2,18 @@ App.View.Simulator = Backbone.View.extend({
   el: '',
   events: {
     // Bind event here
-    'mousemove div.simulator:first': 'moveCursor'
+    'mousemove div.simulator .task': 'moveCursor'
     //'change input.how-many-processes': 'setHowManyProcesses',
     //'submit form.set-how-many-processes': App.Module.generateProcesses(10)
   },
   moveCursor: function(ev) {
-
+    $('tr.data-row').removeClass('current-task');
     ev.stopPropagation();
-    var tgt = ev.currentTarget;
-    //console.log(tgt);
-    var x = (ev.pageX - $(tgt).offset().left);
-    var cursor = this.$el.find('.niddle').eq(0);
-    cursor.css('left', x);
-    var atTime = x;
-    //this.$el.find('.current-task span.text-detail').text(x);
-    
+    var self = ev.currentTarget;
+    //console.log(self);
+    var taskSerial = $(self).data('task-serial');
+    var tgt = $('.task-serial-' + taskSerial).parents('tr');
+    tgt.addClass('current-task');
     return false;
   },
   initialize: function() {
@@ -30,6 +27,23 @@ App.View.Simulator = Backbone.View.extend({
     var resTasks = this.runAlgorithm();
     var template = _.template($('#task-template').html(), {tasks: resTasks} );
     this.$el.find('.simulator').eq(0).append(template);
+    this.start();
+  },
+  doAnimation: function(tgt) {
+    var self = this;
+    this.timer = setInterval(function(){
+      tgt.css('left', '+=2');
+      var left = parseInt(tgt.css('left'), 10);
+      if(left > 65535) {
+        clearInterval(self.timer);
+      }
+    }, 100);
+  },
+  start: function() {
+    this.doAnimation(this.$el.find('.simulator .mask'));
+  },
+  pause: function() {
+    clearInterval(this.timer);
   }
 });
 
@@ -48,8 +62,6 @@ var simulatorFIFO = new App.View.SimulatorFIFO();
 App.View.SimulatorRR = App.View.Simulator.extend({
   el: '#rr-simulator',
   runAlgorithm: function() {
-    //debugger;
-    console.log('runAlgorithm');
     return App.Module.AlgorithmRR(App.Global.processes);
   }
 });
