@@ -2,7 +2,7 @@ App.Module.AlgorithmFIFO = function(processes, atTime) {
   atTime = typeof atTime == 'undefined' ? 0 : atTime;
 
   // Make a clone of input processes so the original data won't be changed.
-  var theseProcesses = processes.clone();
+  var theseProcesses = new App.Collection.Processes(processes.toJSON());
   // Sort collection by the arrive time.
   theseProcesses.comparator = 'arrive_at';
   theseProcesses.sort();

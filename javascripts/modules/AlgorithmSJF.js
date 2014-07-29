@@ -5,7 +5,8 @@ App.Module.AlgorithmSJF = function(processes, atTime) {
   atTime = typeof atTime == 'undefined' ? 0 : atTime;
 
   // Make a clone of input processes so the original data won't be changed.
-  var theseProcesses = processes.clone();
+  var theseProcesses = new App.Collection.Processes(processes.toJSON());
+  console.log(App.Global.processes.toJSON());
   // Sort collection by the arrive time.
   theseProcesses.comparator = 'arrive_at';
   theseProcesses.sort();
@@ -42,6 +43,7 @@ App.Module.AlgorithmSJF = function(processes, atTime) {
         idleStart = time;
         idling = true;
       }
+      time += 1;
     } else {
       
       if(idling) {
@@ -64,6 +66,7 @@ App.Module.AlgorithmSJF = function(processes, atTime) {
       queue.sort();
       // make a task from the process above.
       var runningTask = queue.shift();
+      console.log(runningTask);
       var task = new App.Model.Task();
       var duration = runningTask.get('burst_time');
       //debugger;
@@ -75,10 +78,10 @@ App.Module.AlgorithmSJF = function(processes, atTime) {
       task.set('process_serial', runningTask.get('serial'));
       tasks.add(task);
       // add burstime (duration) to the time.
-     // time += duration;
+      time += duration;
     }
 
-    time += 0.1;
+    
   }
   return tasks;
 
